@@ -1,10 +1,10 @@
 [
   {
     "id": "d880ee19-affa-47d8-a95d-a5398c94dd28",
-    "postId": "1234",
-    "content": "Nau com di nhe 4",
+    "postId": "abcde",
+    "content": "Auth content",
     "createdAt": "2026-01-12T16:43:26.886Z",
-    "updatedAt": "2026-01-12T16:43:26.886Z"
+    "updatedAt": "2026-01-13T05:10:40.925Z"
   },
   {
     "id": "7b32c138-fba2-4d4f-bb5a-7b8f698e096f",

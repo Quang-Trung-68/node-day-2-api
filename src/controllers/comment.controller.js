@@ -26,7 +26,7 @@ function getComment(req, res) {
 
   const commentData = CommentModel.getOne(id);
 
-  if (commentData == "{}")
+  if (!commentData)
     return res.status(404).json({
       success: false,
       message: "Comment is not found",
@@ -63,7 +63,7 @@ function updateComment(req, res) {
     content,
   });
 
-  if (newComment == "{}")
+  if (!newComment)
     return res.status(404).json({
       success: false,
       message: "Comment is not found",
@@ -80,7 +80,7 @@ function destroyComment(req, res) {
 
   const commentData = CommentModel.destroy(id);
 
-  if (commentData == "{}")
+  if (!commentData)
     return res.status(404).json({
       success: false,
       message: "Comment is not found",

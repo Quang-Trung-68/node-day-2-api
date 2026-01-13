@@ -26,7 +26,7 @@ function getPost(req, res) {
 
   const postData = PostModel.getOne(id);
 
-  if (postData == "{}")
+  if (!postData)
     return res.status(404).json({
       success: false,
       message: "Post is not found",
@@ -63,7 +63,7 @@ function updatePost(req, res) {
     content,
   });
 
-  if (newPost == "{}")
+  if (!newPost)
     return res.status(404).json({
       success: false,
       message: "Post is not found",
@@ -80,7 +80,7 @@ function destroyPost(req, res) {
 
   const postData = PostModel.destroy(id);
 
-  if (postData == "{}")
+  if (!postData)
     return res.status(404).json({
       success: false,
       message: "Post is not found",

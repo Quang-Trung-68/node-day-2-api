@@ -23,7 +23,7 @@ function getOne(id) {
   const rootData = loadDB(RESOURCE);
 
   const data = rootData.find((_data) => _data.id === id);
-  if (!data) return "{}";
+  if (!data) return null;
 
   return data;
 }
@@ -42,7 +42,7 @@ function update(id, data) {
 
   const updatedData = tempData.find((_data) => _data.id === id);
   const updatedDataIndex = tempData.findIndex((_data) => _data.id === id);
-  if (!updatedData) return "{}";
+  if (!updatedData) return null;
 
   const newData = {
     ...updatedData,
@@ -61,7 +61,7 @@ function destroy(id) {
   const rootData = loadDB(RESOURCE);
   let tempData = [...rootData];
   const destroyedData = tempData.find((_data) => _data.id === id);
-  if (!destroyedData) return "{}";
+  if (!destroyedData) return null;
 
   tempData = tempData.filter((_data) => _data.id !== id);
 
